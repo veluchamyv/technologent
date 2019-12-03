@@ -34,13 +34,13 @@
            device_type: vmxnet3
            ip: 10.10.68.1
            netmask: 255.255.254.0
-		   Subnet: 10.10.68.0/23 
+           Subnet: 10.10.68.0/23 
            gateway: 10.10.68.1
          - dns_servers:
            - 10.10.98.198
            - 10.10.98.199
          - domain: techlab.com
-	   wait_for_ip_address: True
+	wait_for_ip_address: True
         state: present
       register: newvm
 
