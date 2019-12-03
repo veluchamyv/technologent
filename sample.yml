@@ -40,8 +40,8 @@
            - 10.10.98.198
            - 10.10.98.199
          - domain: techlab.com
-     wait_for_ip_address: True
-        state: present
+       wait_for_ip_address: True
+       state: present
       register: newvm
 
    - name: IP address info
