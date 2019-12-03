@@ -11,7 +11,7 @@
    tasks:    
     - name: create vm
       vmware_guest:
-        vcenter_hostname: "{{ vcenter_hostname }}"
+        hostname: "{{ vcenter_hostname }}"
         username: "{{ vcenter_user }}"
         password: "{{ vcenter_pass }}"
         state: present        
@@ -20,6 +20,7 @@
         datacenter: "IRV-LAB"
         folder: "/IRV-LAB/templates/Windows"
         cluster: "fx2-vsan"
+        datastore: "{{ datastore }}"
         networks:
           - name: VM Network
             ip: 10.10.68.235
