@@ -10,7 +10,7 @@
   	datacenter: IRV-LAB
     esxhost: fx2-vscan
     datastore: Tegile01-iso
-    vmtemplate: Server2016Base
+    vmtemplate: Server2016BaseGUI
     name: "testvm_1"
     notes: Ansible Test
     dumpfacts: False
