@@ -20,7 +20,6 @@
         datacenter: "IRV-LAB"
         folder: "templates/Windows"
         cluster: "fx2-vsan"
-        datastore: "{{ datastore }}"
         validate_certs: False
         networks:
         - name: vds-5k-core-servers-static
