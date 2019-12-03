@@ -1,8 +1,49 @@
----
-- name: technologent
-  hosts: all
+- name: VM from template
+  hosts: localhost
+  gather_facts: false
+  connection: local
+  
+  vars:
+    vcenter_hostname: vc1-irv.techlab.com
+    vcenter_user: Manikanta.Annam
+    vcenter_pass: ChangeMeNow007!
+  	datacenter: IRV-LAB
+    esxhost: fx2-vscan
+    datastore: Tegile01-iso
+    vmtemplate: Server2016Base
+    name: "testvm_1"
+    notes: Ansible Test
+    dumpfacts: False
+  
   tasks:
-     - name: Add hosts name
-       debug:
-         msg:
-            - 'hello'
+   - name: Create VM from template
+     vmware_guest:
+       validate_certs: False
+       hostname: "{{ vcenter_hostname }}"
+       username: "{{ vcenter_user }}"
+       password: "{{ vcenter_pass }}"
+       esxi_hostname: "{{ esxhost }}"
+       datacenter: "{{ datacenter }}"
+       name: "{{ name }}"
+       template: "{{ vmtemplate }}"
+       folder: template
+       datastore: "{{ datastore }}"
+       networks:
+         - name: "Network settings"
+           type: static
+           device_type: vmxnet3
+           ip: 10.10.68.1
+           netmask: 255.255.254.0
+		   Subnet: 10.10.68.0/23 
+           gateway: 10.10.68.1
+         - dns_servers:
+           - 10.10.98.198
+           - 10.10.98.199
+         - domain: techlab.com
+	   wait_for_ip_address: True
+        state: present
+      register: newvm
+
+   - name: IP address info
+      debug:
+        msg: "{{ newvm.instance.ipv4 }} {{ name }}"
