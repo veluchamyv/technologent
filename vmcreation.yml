@@ -1,0 +1,31 @@
+---
+ - hosts: localhost   
+   gather_facts: false
+   connection: local
+   vars:
+    vcenter_hostname: vc1-irv.techlab.com
+    vcenter_user: veera.veluchamy
+    vcenter_pass: ChangeMeNow007!
+    datastore: Tegile01-iso
+    
+   tasks:    
+    - name: create vm
+      vmware_guest:
+        vcenter_hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_user }}"
+        password: "{{ vcenter_pass }}"
+        state: present        
+        name: "Oiab_test"
+        template: "Server2016BaseGUI"
+        datacenter: "IRV-LAB"
+        folder: "/IRV-LAB/templates/Windows"
+        cluster: "fx2-vsan"
+        networks:
+          - name: VM Network
+            ip: 10.10.68.235
+            netmask: 255.255.254.0
+            gateway: 10.10.68.1
+            type: static
+            dns_servers: 10.10.98.198
+        state: poweredon
+        wait_for_ip_address: yes
