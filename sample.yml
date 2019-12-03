@@ -7,7 +7,7 @@
     vcenter_hostname: vc1-irv.techlab.com
     vcenter_user: Manikanta.Annam
     vcenter_pass: ChangeMeNow007!
-  	datacenter: IRV-LAB
+    datacenter: IRV-LAB
     esxhost: fx2-vscan
     datastore: Tegile01-iso
     vmtemplate: Server2016BaseGUI
