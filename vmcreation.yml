@@ -18,7 +18,7 @@
         name: "Oiab_test"
         template: "Server2016BaseGUI"
         datacenter: "IRV-LAB"
-        folder: "/IRV-LAB/templates/Windows"
+        folder: "templates/Windows"
         cluster: "fx2-vsan"
         datastore: "{{ datastore }}"
         validate_certs: False
@@ -29,7 +29,4 @@
             gateway: 10.10.68.1
             type: static
             dns_servers: 10.10.98.198
-        state: poweredon
         wait_for_ip_address: yes
-
-          
