@@ -42,8 +42,3 @@
          - domain: techlab.com
        wait_for_ip_address: True
        state: present
-      register: newvm
-
-   - name: IP address info
-      debug:
-        msg: "{{ newvm.instance.ipv4 }} {{ name }}"
