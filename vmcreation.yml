@@ -10,7 +10,7 @@
     
    tasks:    
     - name: create vm
-      vmware_guest:
+      vmware_guest:        
         hostname: "{{ vcenter_hostname }}"
         username: "{{ vcenter_user }}"
         password: "{{ vcenter_pass }}"
@@ -21,6 +21,7 @@
         folder: "/IRV-LAB/templates/Windows"
         cluster: "fx2-vsan"
         datastore: "{{ datastore }}"
+        validate_certs: False
         networks:
           - name: VM Network
             ip: 10.10.68.235
@@ -30,3 +31,5 @@
             dns_servers: 10.10.98.198
         state: poweredon
         wait_for_ip_address: yes
+
+          
