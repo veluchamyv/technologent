@@ -15,7 +15,7 @@
         username: "{{ vcenter_user }}"
         password: "{{ vcenter_pass }}"
         state: present        
-        name: "Oiab_test"
+        name: "Oiab_test1"
         template: "Server2016BaseGUI"
         datacenter: "IRV-LAB"
         folder: "templates/Windows"
