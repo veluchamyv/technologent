@@ -23,7 +23,7 @@
         validate_certs: False
         networks:
         - name: vds-5k-core-servers-static
-          ip: 10.10.68.235
+          ip: 10.10.68.236
           netmask: 255.255.254.0            
           gateway: 10.10.68.1
           type: static
