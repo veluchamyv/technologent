@@ -1,7 +1,8 @@
 ---
  - hosts: 10.10.68.236
    gather_facts: false
-   vars: 
+   vars:
+     ansible_user: Administrator
      ansible_port: 5985
      ansible_connection: winrm
      ansible_winrm_transport: basic
