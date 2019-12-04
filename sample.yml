@@ -26,8 +26,7 @@
        folder: "templates/Windows"
        name: "{{ name }}"
        template: "{{ vmtemplate }}"
-       folder: template
-       datastore: "{{ datastore }}"
+       folder: "templates/Windows"
        networks:
          - name: vds-5k-core-servers-static
            type: static
