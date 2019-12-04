@@ -21,6 +21,7 @@
        hostname: "{{ vcenter_hostname }}"
        username: "{{ vcenter_user }}"
        password: "{{ vcenter_pass }}"
+       state: present
        cluster: "fx2-vsan"
        datacenter: "{{ datacenter }}"
        folder: "templates/Windows"
@@ -38,4 +39,3 @@
            - 10.10.98.199
          - domain: techlab.com
        wait_for_ip_address: True
-       state: present
