@@ -8,7 +8,7 @@
     vcenter_user: Manikanta.Annam
     vcenter_pass: ChangeMeNow007!
     datacenter: IRV-LAB
-    esxhost: fx2-vscan
+    cluster: "fx2-vsan"
     vmtemplate: Server2016BaseGUI
     name: "testvm_1"
     notes: Ansible Test
@@ -21,7 +21,7 @@
        hostname: "{{ vcenter_hostname }}"
        username: "{{ vcenter_user }}"
        password: "{{ vcenter_pass }}"
-       esxi_hostname: "{{ esxhost }}"
+       cluster: "fx2-vsan"
        datacenter: "{{ datacenter }}"
        folder: "templates/Windows"
        name: "{{ name }}"
