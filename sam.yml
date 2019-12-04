@@ -1,8 +1,0 @@
----
-- name: technologent
-  hosts: all
-  tasks:
-     - name: Add hosts name
-       debug:
-         msg:
-            - 'hello'
