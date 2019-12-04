@@ -1,5 +1,5 @@
 ---
- - hosts: Oiab_window_oiabtest1
+ - hosts: 10.10.68.236
    gather_facts: false
    vars: 
      ansible_port: 5985
