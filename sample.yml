@@ -9,7 +9,6 @@
     vcenter_pass: ChangeMeNow007!
     datacenter: IRV-LAB
     esxhost: fx2-vscan
-    datastore: Tegile01-iso
     vmtemplate: Server2016BaseGUI
     name: "testvm_1"
     notes: Ansible Test
@@ -33,7 +32,7 @@
          - name: vds-5k-core-servers-static
            type: static
            device_type: vmxnet3
-           ip: 10.10.68.1
+           ip: 10.10.68.236
            netmask: 255.255.254.0
            Subnet: 10.10.68.0/23 
            gateway: 10.10.68.1
