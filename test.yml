@@ -1,7 +1,6 @@
 ---
- - hosts: 10.10.68.237
+ - hosts: Oiab_window_oiabtest1
    gather_facts: false
-   connection: local
    vars: 
      ansible_port: 5985
      ansible_connection: winrm
