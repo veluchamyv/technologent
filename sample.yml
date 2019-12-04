@@ -10,7 +10,7 @@
     datacenter: IRV-LAB
     cluster: "fx2-vsan"
     vmtemplate: Server2016BaseGUI
-    name: "testvm_1"
+    name: "Oiab_test1"
     notes: Ansible Test
     dumpfacts: False
   
