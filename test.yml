@@ -1,5 +1,5 @@
 ---
- - hosts: 10.10.68.236
+ - hosts: all
    gather_facts: false
    vars:
      ansible_user: Administrator
@@ -14,7 +14,3 @@
    tasks:
     - name: Example from an Ansible Playbook
       win_ping:
-
-    - name: Induce an exception to see what happens
-      win_ping:
-           data: crash
