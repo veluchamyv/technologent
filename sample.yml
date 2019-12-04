@@ -29,10 +29,10 @@
        template: "{{ vmtemplate }}"
        folder: "templates/Windows"
        networks:
-         - name: vds-5k-core-servers-static
-           ip: 10.10.68.237
-           netmask: 255.255.254.0
-           gateway: 10.10.68.1
-           type: static
-         - dns_servers: 10.10.98.198
+       - name: vds-5k-core-servers-static
+          ip: 10.10.68.237
+          netmask: 255.255.254.0            
+          gateway: 10.10.68.1
+          type: static
+          dns_servers: 10.10.98.198
        wait_for_ip_address: True
