@@ -1,7 +1,18 @@
 ---
- - hosts: localhost   
+ - hosts: 10.10.68.237
    gather_facts: false
    connection: local
+   vars: 
+     ansible_port: 5985
+     ansible_connection: winrm
+     ansible_winrm_transport: basic
+     ansible_winrm_operation_timeout_sec: 60
+     ansible_winrm_read_timeout_sec: 70
+
    tasks:
-    - name: print sample
-      shell: "echo hai"
+    - name: Example from an Ansible Playbook
+      win_ping:
+
+    - name: Induce an exception to see what happens
+     win_ping:
+           data: crash
