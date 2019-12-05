@@ -2,14 +2,14 @@
 - name: test connetion
   hosts: all
   vars:
-    ansible_user: Admi
-    ansible_password: your_password_here
+    ansible_user: Administrator
+    ansible_password: technologent@1
     ansible_port: 5985
-    ansible_connection:winrm
+    ansible_connection: winrm
     ansible_winrm_transport: basic
-	ansible_winrm_server_cert_validation=ignore
+    ansible_winrm_server_cert_validation: ignore
     ansible_winrm_operation_timeout_sec: 60
     ansible_winrm_read_timeout_sec: 70
   tasks: 
     - name: ping
-	    win_ping: 
+      win_ping: 
